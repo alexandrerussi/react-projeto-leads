@@ -1,5 +1,17 @@
+header {
+    background-color: #262626;
+    color: white;
+    padding: 7vh 0;
+    text-align: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
 header img {
-    height: 6em;
+    height: 4em;
     padding: 1.5em;
     will-change: filter;
     transition: filter 300ms;

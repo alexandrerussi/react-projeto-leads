@@ -1,0 +1,48 @@
+aside {
+    width: 30%;
+    min-width: 280px;
+}
+
+aside h2 {
+    font-size: 20px;
+}
+
+aside p {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+form label, form input {
+    display: block;
+}
+
+form label {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+form input {
+    border: none;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+    height: 35px;
+    width: 100%;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form button {
+    border: none;
+    background-color: #61DAF8;
+    border-radius: 5px;
+    height: 35px;
+    width: 110px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 20px;
+}

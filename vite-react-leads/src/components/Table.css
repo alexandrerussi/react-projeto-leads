@@ -1,0 +1,34 @@
+table {
+    width: 60%;
+    min-width: 430px;
+
+    background-color: #eaeaea;
+    border-collapse: collapse;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    text-align: left;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #61DAFB;
+    padding: 10px 0;
+}
+
+table th:first-child {
+    border-top-left-radius: 10px;
+    padding-left: 20px;
+}
+
+table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table td {
+    border-bottom: 1px solid #afafaf;
+}
+
+table td:first-child {
+    padding-left: 20px;
+}

@@ -1,8 +1,21 @@
 import React from "react";
 import TableRow from "./TableRow";
+import "./Table.css";
 
 class TableLeads extends React.Component {
+    
     render() {
+        const rows = [];
+
+        this.props.leads.forEach(lead => {
+            rows.push(
+                <TableRow
+                    name={lead.name}
+                    email={lead.email}
+                    numPhone={lead.numPhone}/>
+            )
+        });
+        
         return (
             <table>
                 <thead>
@@ -14,10 +27,7 @@ class TableLeads extends React.Component {
                     </tr>
                 </thead>
                 <tbody>
-                    <TableRow
-                        name="Joãozinho"
-                        email="joao@user.com"
-                        numPhone="123123412"/>
+                    {rows}
                 </tbody>
             </table>
         );

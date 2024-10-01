@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "../common-components/Input";
+import "./Form.css";
 
 class Form extends React.Component {
     render() {
@@ -7,7 +8,7 @@ class Form extends React.Component {
             <aside>
                 <h2>Insira novos leads</h2>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, nam aliquid? Aliquid eum ad porro magni sequi nemo atque ipsum. Consequatur molestiae quae dolores vero, doloremque non quam aut. Quasi?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 </p>
 
                 <form>
