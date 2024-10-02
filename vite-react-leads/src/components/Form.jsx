@@ -3,7 +3,40 @@ import Input from "../common-components/Input";
 import "./Form.css";
 
 class Form extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: '',
+            email: '',
+            numPhone: ''
+        }
+    }
+
+    handleChange = (event) => {
+        // console.log(event.target);
+
+        const { id, value } = event.target;
+        console.log(id);
+
+        this.setState({
+            [id]: value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        
+        this.props.onHandleSubmit(this.state);
+    }
+
     render() {
+        // const name = this.state.name;
+        // const email = this.state.email;
+        // const numPhone = this.state.numPhone;
+
+        const { name, email, numPhone } = this.state;
+
         return (
             <aside>
                 <h2>Insira novos leads</h2>
@@ -12,22 +45,22 @@ class Form extends React.Component {
                 </p>
 
                 <form>
-                    <Input
-                        id="nome"
-                        label="Nome Completo:"
-                        placeholder="Ex.: Rodrigo" />
+                    <div>
+                        <label htmlFor="name">Nome</label>
+                        <input type="text" id="name" placeholder="Ex.: Rodrigo" onChange={this.handleChange} value={name}/>
+                    </div>
 
-                    <Input
-                        id="email"
-                        label="E-mail:"
-                        placeholder="Ex.: user@email.com" />
+                    <div>
+                        <label htmlFor="email">E-mail</label>
+                        <input type="text" id="email" placeholder="Ex.: user@email.com" onChange={this.handleChange} value={email}/>
+                    </div>
 
-                    <Input
-                        id="celular"
-                        label="Celular:"
-                        placeholder="Ex.: 11 98765-4321" />
+                    <div>
+                        <label htmlFor="numPhone">Celular</label>
+                        <input type="text" id="numPhone" placeholder="Ex.: 11 98765-4321" onChange={this.handleChange} value={numPhone}/>
+                    </div>
                     
-                    <button>Cadastrar</button>
+                    <button onClick={this.handleSubmit}>Cadastrar</button>
                 </form>
             </aside>
         );

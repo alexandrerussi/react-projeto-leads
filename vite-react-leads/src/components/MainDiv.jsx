@@ -4,11 +4,27 @@ import TableLeads from "./TableLeads";
 import "./MainDiv.css";
 
 class Main extends React.Component {
+    constructor (props) {
+        super(props);
+
+        let leads = props.leads;
+
+        this.state = {
+            leads
+        }
+    }
+
+    onHandleSubmit = (lead) => {
+        this.setState({
+            leads: [...this.state.leads, lead]
+        })
+    }
+
     render() {
         return(
             <main>
-                <Form/>
-                <TableLeads leads={this.props.leads}/>
+                <Form onHandleSubmit={this.onHandleSubmit}/>
+                <TableLeads leads={this.state.leads}/>
             </main>
         )
     }
