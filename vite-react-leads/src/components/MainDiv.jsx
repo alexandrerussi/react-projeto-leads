@@ -20,11 +20,21 @@ class Main extends React.Component {
         })
     }
 
+    onHandleDeleteLead = (index) => {
+        const { leads } = this.state;
+
+        this.setState({
+            leads: leads.filter((leads, i) => {
+                return i != index;
+            })
+        })
+    }
+
     render() {
         return(
             <main>
                 <Form onHandleSubmit={this.onHandleSubmit}/>
-                <TableLeads leads={this.state.leads}/>
+                <TableLeads leads={this.state.leads} onDeleteLead={this.onHandleDeleteLead}/>
             </main>
         )
     }

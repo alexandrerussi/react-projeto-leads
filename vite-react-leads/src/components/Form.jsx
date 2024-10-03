@@ -28,6 +28,12 @@ class Form extends React.Component {
         event.preventDefault();
         
         this.props.onHandleSubmit(this.state);
+
+        this.setState({
+            name: '',
+            email: '',
+            numPhone: ''
+        })
     }
 
     render() {
